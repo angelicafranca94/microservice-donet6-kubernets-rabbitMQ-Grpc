@@ -15,6 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseInMemoryDatabase("InMem"));
 
+builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
+
 #endregion
 
 var app = builder.Build();
